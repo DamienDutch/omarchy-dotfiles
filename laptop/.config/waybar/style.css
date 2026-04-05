@@ -126,10 +126,9 @@ window#waybar {
 #network,
 #pulseaudio,
 #cpu,
+#memory,
 #custom-weather,
-#custom-fan,
-#custom-tmux,
-#battery {
+#custom-tmux {
   padding: 0;
 }
 
@@ -137,10 +136,9 @@ window#waybar {
 #network,
 #pulseaudio,
 #cpu,
+#memory,
 #custom-weather,
-#custom-fan,
-#custom-tmux,
-#battery {
+#custom-tmux {
   border-left: 1px solid alpha(@foreground, 0.08);
   padding-left: 7px;
   margin-left: 5px;
@@ -159,10 +157,9 @@ window#waybar {
 }
 
 #cpu,
+#memory,
 #custom-weather,
-#custom-fan,
-#custom-tmux,
-#battery {
+#custom-tmux {
   font-weight: 700;
 }
 
@@ -174,21 +171,10 @@ window#waybar {
   color: alpha(@foreground, 0.96);
 }
 
-#custom-fan.muted {
-  color: alpha(@foreground, 0.70);
-}
-
-#battery.warning {
-  font-weight: 800;
-}
-
-#battery.critical,
 #custom-screenrecording-indicator.active,
 #custom-voxtype.recording,
 #custom-idle-indicator.active,
-#custom-notification-silencing-indicator.active,
-#custom-fan.warning,
-#custom-fan.critical {
+#custom-notification-silencing-indicator.active {
   color: #d98c8c;
 }
 
