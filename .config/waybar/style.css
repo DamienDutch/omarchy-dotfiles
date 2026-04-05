@@ -1,0 +1,197 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  border: none;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 12px;
+  background: transparent;
+  color: @foreground;
+}
+
+window#waybar {
+  background: transparent;
+  color: @foreground;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 0;
+}
+
+#group-left-cluster,
+#group-center-cluster,
+#group-right-cluster {
+  background-color: alpha(@background, 0.78);
+  border: 1px solid alpha(@foreground, 0.12);
+  border-radius: 11px;
+  padding: 0 7px;
+  box-shadow: inset 0 1px 0 alpha(@foreground, 0.04);
+}
+
+#group-left-cluster {
+  padding-left: 9px;
+  padding-right: 7px;
+}
+
+#group-center-cluster {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+#group-right-cluster {
+  padding-left: 6px;
+  padding-right: 8px;
+}
+
+#custom-omarchy {
+  margin-right: 6px;
+  font-size: 13px;
+}
+
+#workspaces {
+  margin: 0;
+}
+
+#workspaces button {
+  all: unset;
+  color: alpha(@foreground, 0.82);
+  padding: 0 9px;
+  margin: 3px 2px;
+  min-width: 13px;
+  border-radius: 9px;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px transparent;
+}
+
+#workspaces button:hover {
+  background-color: alpha(@foreground, 0.10);
+  color: @foreground;
+}
+
+#workspaces button:not(.empty):not(.active) {
+  background-color: alpha(@foreground, 0.05);
+  color: alpha(@foreground, 0.92);
+  box-shadow: inset 0 0 0 1px alpha(@foreground, 0.10);
+}
+
+#workspaces button.active {
+  background-color: alpha(@foreground, 0.16);
+  color: @foreground;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px alpha(@foreground, 0.22);
+}
+
+#workspaces button.empty {
+  color: alpha(@foreground, 0.42);
+  background-color: transparent;
+  box-shadow: none;
+  opacity: 0.62;
+}
+
+#clock {
+  font-weight: 400;
+  padding: 0 7px 0 1px;
+}
+
+#group-center-status {
+  border-left: 1px solid alpha(@foreground, 0.08);
+  padding-left: 7px;
+  margin-left: 1px;
+}
+
+#custom-update,
+#custom-voxtype,
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 0;
+  margin: 0 0 0 5px;
+  font-size: 10px;
+}
+
+.hidden {
+  opacity: 0;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+#tray,
+#bluetooth,
+#network,
+#pulseaudio,
+#cpu,
+#custom-weather,
+#custom-fan,
+#custom-tmux,
+#battery {
+  padding: 0;
+}
+
+#bluetooth,
+#network,
+#pulseaudio,
+#cpu,
+#custom-weather,
+#custom-fan,
+#custom-tmux,
+#battery {
+  border-left: 1px solid alpha(@foreground, 0.08);
+  padding-left: 7px;
+  margin-left: 5px;
+}
+
+#tray {
+  margin-right: 0;
+}
+
+#bluetooth,
+#network,
+#pulseaudio {
+  font-size: 13px;
+  min-width: 14px;
+  padding-right: 2px;
+}
+
+#cpu,
+#custom-weather,
+#custom-fan,
+#custom-tmux,
+#battery {
+  font-weight: 700;
+}
+
+#custom-weather {
+  min-width: 0;
+}
+
+#custom-tmux.attached {
+  color: alpha(@foreground, 0.96);
+}
+
+#custom-fan.muted {
+  color: alpha(@foreground, 0.70);
+}
+
+#battery.warning {
+  font-weight: 800;
+}
+
+#battery.critical,
+#custom-screenrecording-indicator.active,
+#custom-voxtype.recording,
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active,
+#custom-fan.warning,
+#custom-fan.critical {
+  color: #d98c8c;
+}
+
+tooltip {
+  background-color: alpha(@background, 0.94);
+  border: 1px solid alpha(@foreground, 0.12);
+  border-radius: 10px;
+  padding: 8px;
+}
